@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name             = 'UPGPayButton'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'UPGPayButton'
  
-  s.description      = "UPGPayButton SDK"
+  s.description      = "UPG PayButton SDK IOS"
 
   s.homepage         = 'https://github.com/payskyCompany/UPG-PayButton-SDK-ios'
  
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
 
   s.author           = { 'payskyCompany' => 'ahmed.agamy@paysky.io' }
-  s.source           = { :git => 'https://github.com/payskyCompany/UPG-PayButton-SDK-ios', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/payskyCompany/UPG-PayButton-SDK-ios.git', :tag => s.version.to_s }
  
 
        #   s.xcconfig =  {'SWIFT_OBJC_BRIDGING_HEADER' => 'PayButton/PayButton-Bridging-Header.h}
