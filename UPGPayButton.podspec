@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UPGPayButton'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'UPGPayButton'
  
   s.description      = "UPG PayButton SDK IOS"
@@ -43,7 +43,6 @@ Pod::Spec.new do |s|
   s.dependency 'EVReflection', '~> 5.10.1'
   s.dependency 'PayCardsRecognizer', '~> 1.1.7'
   s.dependency 'PopupDialog', '~> 1.1.1'
-  s.dependency 'MOLH'
 
  
 
