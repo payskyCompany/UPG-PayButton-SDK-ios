@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UPGPayButton'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'UPGPayButton'
  
   s.description      = "UPG PayButton SDK IOS"
