@@ -23,12 +23,8 @@ A step by step that tell you how to get our SDK in your project.
 ```
 1- open your xcode project.
 2- in your project in Podfile in project level  add :-
-pod 'PayButton'
+pod 'UPGPayButton'
 3- open your terminal in project path and write this command:-
-(for first try)
-- pod deintegrate
-- pod update
-(for second try)
 - pod install
 
 
