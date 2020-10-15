@@ -429,8 +429,12 @@ var UrlTypeRow = 0
 }
 
 
+
+
+
+
 extension Bundle {
-    static func swizzleLocalization() { 
+    static func swizzleLocalization() {
         let orginalSelector = #selector(localizedString(forKey:value:table:))
         guard let orginalMethod = class_getInstanceMethod(self, orginalSelector) else { return }
 
