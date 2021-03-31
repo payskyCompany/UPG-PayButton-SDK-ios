@@ -10,11 +10,6 @@ import UIKit
 import MOLH
 
 class ViewController: UIViewController, PaymentDelegate, UIPickerViewDelegate, UIPickerViewDataSource  {
-    let PaySkyTitle = "PAYSKY"
-    let upgTitle = "UPG"
-    let selectedTitle = "UPG"
-
-
     
     override func viewWillAppear(_ animated: Bool) {
         if MOLHLanguage.currentAppleLanguage() != "ar" {
@@ -55,10 +50,9 @@ class ViewController: UIViewController, PaymentDelegate, UIPickerViewDelegate, U
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedOne = row
     }
-    var DataToShow: [String] = [String]()
-    var DataToSend: [UrlTypes] = [UrlTypes]()
+    var DataToShow = ["UPG Stagging", "UPG Production"]
 
-    var DataToSendUPG: [UPGUrlTypes] = [UPGUrlTypes]()
+    var DataToSendUPG: [UPGUrlTypes] = [.UPG_Staging ,.UPG_Production]
     
     
     var selectedOne = 0
@@ -85,7 +79,6 @@ class ViewController: UIViewController, PaymentDelegate, UIPickerViewDelegate, U
     @IBOutlet weak var ChangeLang: UIButton!
     @IBOutlet weak var urltest: UILabel!
 
-    @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var PayBtn: UIButton!
     @IBOutlet weak var CurrencyEd: UITextField!
     @IBOutlet weak var CurrencyLabel: UILabel!
@@ -97,10 +90,6 @@ class ViewController: UIViewController, PaymentDelegate, UIPickerViewDelegate, U
     @IBOutlet weak var MerchantIdEd: UITextField!
     @IBOutlet weak var MerchantIdLabel: UILabel!
     @IBOutlet weak var AppName: UILabel!
-//
-//    @IBOutlet weak var RefLabel: UILabel!
-//
-//    @IBOutlet weak var RefValue: UITextField!
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
@@ -115,7 +104,6 @@ class ViewController: UIViewController, PaymentDelegate, UIPickerViewDelegate, U
         }
     }
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
     @IBOutlet weak var picker: UIPickerView!
@@ -124,41 +112,14 @@ class ViewController: UIViewController, PaymentDelegate, UIPickerViewDelegate, U
         super.viewDidLoad()
         self.picker.delegate = self
                self.picker.dataSource = self
-        
-        if selectedTitle != PaySkyTitle {
-            imageLogo.image = UIImage(named: "upg_orange_logo")
-            DataToShow = ["UPG Stagging", "UPG Production"]
-            DataToSendUPG = [.UPG_Staging,.UPG_Production]
-        }
-        else {
-            DataToShow = ["Production", "Testing"]
-            DataToSend = [.Production,.Testing]
-        }
-
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-
-              //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-              //tap.cancelsTouchesInView = false
-
-              view.addGestureRecognizer(tap)
-//         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//                   NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
-        
-        
+        view.addGestureRecognizer(tap)
         ChangeLang.setTitle("change_lang".localizedPaySky(), for: .normal)
         PayBtn.setTitle("pay_now".localizedPaySky(), for: .normal)
         PayBtn.layer.cornerRadius = PaySkySDKColor.RaduisNumber
-        
         MerchantIdLabel.text = "Merchant ID_paysky".localizedPaySky()
                MerchantIdEd.setTextFieldStyle( "Merchant ID_paysky".localizedPaySky(), title: "", textColor: UIColor.black, font:Global.setFont(14) ,
                                                borderWidth: 1, borderColor: UIColor.gray, backgroundColor: UIColor.white, cornerRadius: PaySkySDKColor.RaduisNumber , placeholderColor: UIColor.gray,maxLength: 20,padding: 20)
-         
-       //        RefLabel.text = "ref_number".localizedPaySky()
-       //        RefValue.setTextFieldStyle("ref_number".localizedPaySky(), title: "3424324234", textColor: UIColor.black, font:Global.setFont(14) ,
-       //                                       borderWidth: 1, borderColor: UIColor.gray, backgroundColor: UIColor.white, cornerRadius: PaySkySDKColor.RaduisNumber , placeholderColor: UIColor.gray,maxLength: 10,padding: 20)
-               
-               
                TerminalIDLabel.text =  "Terminal ID_paysky".localizedPaySky()
                TerminalIDTF.setTextFieldStyle( "Terminal ID_paysky".localizedPaySky(), title: "", textColor: UIColor.black, font:Global.setFont(14) ,
                                               borderWidth: 1, borderColor: UIColor.gray, backgroundColor: UIColor.white, cornerRadius: PaySkySDKColor.RaduisNumber , placeholderColor: UIColor.gray,maxLength: 20,padding: 20)

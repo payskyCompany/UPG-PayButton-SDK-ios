@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -210,7 +210,7 @@
                                     <constraint firstItem="vE0-Xi-TWe" firstAttribute="width" secondItem="NGd-4U-hcF" secondAttribute="width" id="ylc-sd-dqZ"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power_by_paysky" translatesAutoresizingMaskIntoConstraints="NO" id="mlj-iR-mJl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upg_orange_logo" translatesAutoresizingMaskIntoConstraints="NO" id="mlj-iR-mJl">
                                 <rect key="frame" x="455.33333333333326" y="670" width="154" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="154" id="F1e-wb-2p6"/>
@@ -272,7 +272,6 @@
                         <outlet property="SecureHash" destination="kWe-tT-6Ys" id="0oF-CA-iGR"/>
                         <outlet property="TerminalIDLabel" destination="vE0-Xi-TWe" id="4EN-uo-WNt"/>
                         <outlet property="TerminalIDTF" destination="ThE-d4-KU7" id="OQY-4E-sYq"/>
-                        <outlet property="imageLogo" destination="mlj-iR-mJl" id="XbK-gU-x8b"/>
                         <outlet property="picker" destination="o7q-PX-iBC" id="Fxi-tK-jp2"/>
                         <outlet property="urltest" destination="f9W-GG-wwE" id="vwo-ko-Ij4"/>
                     </connections>
@@ -284,6 +283,6 @@
     </scenes>
     <resources>
         <image name="ic_wallet_sdk" width="300" height="261"/>
-        <image name="power_by_paysky" width="79.666664123535156" height="33.333332061767578"/>
+        <image name="upg_orange_logo" width="376" height="199"/>
     </resources>
 </document>

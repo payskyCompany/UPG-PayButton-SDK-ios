@@ -19,17 +19,7 @@ extension UITableView {
 }
 
 class MainScanViewController: BasePaymentViewController , UITableViewDataSource, UITableViewDelegate ,ActionCellActionDelegate {
-    let PaySkyTitle = "PAYSKY"
-    let upgTitle = "UPG"
-    @IBOutlet weak var imageLogo: UIImageView!
-    let selectedTitle = "UPG"
     @IBAction func ChangeLangAction(_ sender: Any) {
-      
-
-        
-        
-        
-            
             UIView.appearance().semanticContentAttribute = MOLHLanguage.currentAppleLanguage() == "ar" ? .forceRightToLeft : .forceLeftToRight
             
             MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
@@ -201,13 +191,6 @@ var UrlTypeRow = 0
   }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if selectedTitle == PaySkyTitle {
-            imageLogo.image = UIImage(named:"power_by_paysky")
-              }
-              else {
-                imageLogo.image = UIImage(named:"upg_orange_logo")
-              }
-
         
         self.TableViews.isScrollEnabled = false
         self.TableViews.isPagingEnabled = false
